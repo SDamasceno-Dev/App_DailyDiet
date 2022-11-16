@@ -10,8 +10,8 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
-    "plugin:prettier/recommended"
-
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime"
   ],
   "globals": {
     "__DEV__": "readonly"
@@ -31,6 +31,10 @@
     "prettier"
   ],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-empty-function": "off",
     "indent": ["error", 2, {"SwitchCase": 1}],
     "linebreak-style": ["error", "unix"],
